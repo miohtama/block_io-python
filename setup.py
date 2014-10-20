@@ -10,9 +10,10 @@ setup(name='block-io',
       packages=['block_io'],
       install_requires=[
           'requests',
-          'pycrypto',
-          'hashlib',
+          'pycrypto'
       ],
+      # Provide Python3 compatible backported hashlib package
+      extra_require=dict(python2=["hashlib"]),
       zip_safe=False)
 
 # for packages not on pypi
